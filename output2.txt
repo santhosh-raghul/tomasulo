@@ -1,0 +1,3333 @@
+Clock cycles done:  0
+Instruction Queue:  ['ADD R3 R2 R1', 'ADD R4 R3 R2', 'ADD R5 R4 R3', 'ADD R6 R5 R4', 'ADD R7 R6 R5']
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	10        	10        	10        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  1
+Instruction Queue:  ['ADD R4 R3 R2', 'ADD R5 R4 R3', 'ADD R6 R5 R4', 'ADD R7 R6 R5']
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	RS_A_0    	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	10        	10        	10        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | 10       | 10       |    issued    |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  2
+Instruction Queue:  ['ADD R5 R4 R3', 'ADD R6 R5 R4', 'ADD R7 R6 R5']
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	RS_A_0    	RS_A_1    	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	10        	10        	10        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | 10       | 10       |  dispatched  |
+		| ADD  | RS_A_0   | 10       |    issued    |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  3
+Instruction Queue:  ['ADD R6 R5 R4', 'ADD R7 R6 R5']
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	RS_A_0    	RS_A_1    	RS_A_2    	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	10        	10        	10        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | 10       | 10       |  dispatched  |
+		| ADD  | RS_A_0   | 10       |    issued    |
+		| ADD  | RS_A_1   | RS_A_0   |    issued    |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  4
+Instruction Queue:  ['ADD R6 R5 R4', 'ADD R7 R6 R5']
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	RS_A_0    	RS_A_1    	RS_A_2    	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	10        	10        	10        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | 10       | 10       |  dispatched  |
+		| ADD  | RS_A_0   | 10       |    issued    |
+		| ADD  | RS_A_1   | RS_A_0   |    issued    |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  5
+Instruction Queue:  ['ADD R6 R5 R4', 'ADD R7 R6 R5']
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	RS_A_0    	RS_A_1    	RS_A_2    	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	10        	10        	10        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | 10       | 10       |  dispatched  |
+		| ADD  | RS_A_0   | 10       |    issued    |
+		| ADD  | RS_A_1   | RS_A_0   |    issued    |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  6
+Instruction Queue:  ['ADD R6 R5 R4', 'ADD R7 R6 R5']
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	RS_A_0    	RS_A_1    	RS_A_2    	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	10        	10        	10        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | 10       | 10       |  dispatched  |
+		| ADD  | RS_A_0   | 10       |    issued    |
+		| ADD  | RS_A_1   | RS_A_0   |    issued    |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  7
+Instruction Queue:  ['ADD R6 R5 R4', 'ADD R7 R6 R5']
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	RS_A_0    	RS_A_1    	RS_A_2    	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	10        	10        	10        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | 10       | 10       |  dispatched  |
+		| ADD  | RS_A_0   | 10       |    issued    |
+		| ADD  | RS_A_1   | RS_A_0   |    issued    |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  8
+Instruction Queue:  ['ADD R6 R5 R4', 'ADD R7 R6 R5']
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	RS_A_1    	RS_A_2    	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	10        	10        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ADD  | 20       | 10       |    issued    |
+		| ADD  | RS_A_1   | 20       |    issued    |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  9
+Instruction Queue:  ['ADD R7 R6 R5']
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	RS_A_1    	RS_A_2    	RS_A_0    	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	10        	10        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | RS_A_2   | RS_A_1   |    issued    |
+		| ADD  | 20       | 10       |  dispatched  |
+		| ADD  | RS_A_1   | 20       |    issued    |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  10
+Instruction Queue:  ['ADD R7 R6 R5']
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	RS_A_1    	RS_A_2    	RS_A_0    	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	10        	10        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | RS_A_2   | RS_A_1   |    issued    |
+		| ADD  | 20       | 10       |  dispatched  |
+		| ADD  | RS_A_1   | 20       |    issued    |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  11
+Instruction Queue:  ['ADD R7 R6 R5']
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	RS_A_1    	RS_A_2    	RS_A_0    	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	10        	10        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | RS_A_2   | RS_A_1   |    issued    |
+		| ADD  | 20       | 10       |  dispatched  |
+		| ADD  | RS_A_1   | 20       |    issued    |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  12
+Instruction Queue:  ['ADD R7 R6 R5']
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	RS_A_1    	RS_A_2    	RS_A_0    	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	10        	10        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | RS_A_2   | RS_A_1   |    issued    |
+		| ADD  | 20       | 10       |  dispatched  |
+		| ADD  | RS_A_1   | 20       |    issued    |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  13
+Instruction Queue:  ['ADD R7 R6 R5']
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	RS_A_1    	RS_A_2    	RS_A_0    	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	10        	10        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | RS_A_2   | RS_A_1   |    issued    |
+		| ADD  | 20       | 10       |  dispatched  |
+		| ADD  | RS_A_1   | 20       |    issued    |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  14
+Instruction Queue:  ['ADD R7 R6 R5']
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	RS_A_1    	RS_A_2    	RS_A_0    	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	10        	10        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | RS_A_2   | RS_A_1   |    issued    |
+		| ADD  | 20       | 10       |  dispatched  |
+		| ADD  | RS_A_1   | 20       |    issued    |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  15
+Instruction Queue:  ['ADD R7 R6 R5']
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	RS_A_2    	RS_A_0    	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	10        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | RS_A_2   | 30       |    issued    |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ADD  | 30       | 20       |    issued    |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  16
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	RS_A_2    	RS_A_0    	RS_A_1    	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	10        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | RS_A_2   | 30       |    issued    |
+		| ADD  | RS_A_0   | RS_A_2   |    issued    |
+		| ADD  | 30       | 20       |  dispatched  |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  17
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	RS_A_2    	RS_A_0    	RS_A_1    	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	10        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | RS_A_2   | 30       |    issued    |
+		| ADD  | RS_A_0   | RS_A_2   |    issued    |
+		| ADD  | 30       | 20       |  dispatched  |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  18
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	RS_A_2    	RS_A_0    	RS_A_1    	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	10        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | RS_A_2   | 30       |    issued    |
+		| ADD  | RS_A_0   | RS_A_2   |    issued    |
+		| ADD  | 30       | 20       |  dispatched  |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  19
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	RS_A_2    	RS_A_0    	RS_A_1    	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	10        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | RS_A_2   | 30       |    issued    |
+		| ADD  | RS_A_0   | RS_A_2   |    issued    |
+		| ADD  | 30       | 20       |  dispatched  |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  20
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	RS_A_2    	RS_A_0    	RS_A_1    	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	10        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | RS_A_2   | 30       |    issued    |
+		| ADD  | RS_A_0   | RS_A_2   |    issued    |
+		| ADD  | 30       | 20       |  dispatched  |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  21
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	RS_A_2    	RS_A_0    	RS_A_1    	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	10        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | RS_A_2   | 30       |    issued    |
+		| ADD  | RS_A_0   | RS_A_2   |    issued    |
+		| ADD  | 30       | 20       |  dispatched  |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  22
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	RS_A_0    	RS_A_1    	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | 50       | 30       |    issued    |
+		| ADD  | RS_A_0   | 50       |    issued    |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  23
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	RS_A_0    	RS_A_1    	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | 50       | 30       |  dispatched  |
+		| ADD  | RS_A_0   | 50       |    issued    |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  24
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	RS_A_0    	RS_A_1    	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | 50       | 30       |  dispatched  |
+		| ADD  | RS_A_0   | 50       |    issued    |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  25
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	RS_A_0    	RS_A_1    	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | 50       | 30       |  dispatched  |
+		| ADD  | RS_A_0   | 50       |    issued    |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  26
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	RS_A_0    	RS_A_1    	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | 50       | 30       |  dispatched  |
+		| ADD  | RS_A_0   | 50       |    issued    |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  27
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	RS_A_0    	RS_A_1    	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | 50       | 30       |  dispatched  |
+		| ADD  | RS_A_0   | 50       |    issued    |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  28
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	RS_A_0    	RS_A_1    	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	10        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ADD  | 50       | 30       |  dispatched  |
+		| ADD  | RS_A_0   | 50       |    issued    |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  29
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	RS_A_1    	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ADD  | 80       | 50       |    issued    |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  30
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	RS_A_1    	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ADD  | 80       | 50       |  dispatched  |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  31
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	RS_A_1    	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ADD  | 80       | 50       |  dispatched  |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  32
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	RS_A_1    	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ADD  | 80       | 50       |  dispatched  |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  33
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	RS_A_1    	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ADD  | 80       | 50       |  dispatched  |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  34
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	RS_A_1    	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ADD  | 80       | 50       |  dispatched  |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  35
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	RS_A_1    	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	10        	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ADD  | 80       | 50       |  dispatched  |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  36
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  37
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  38
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  39
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  40
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  41
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  42
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  43
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  44
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  45
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  46
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  47
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  48
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  49
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  50
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  51
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  52
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  53
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  54
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  55
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  56
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  57
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  58
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  59
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  60
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  61
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  62
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  63
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  64
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  65
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  66
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  67
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  68
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  69
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  70
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  71
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  72
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  73
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  74
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  75
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  76
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  77
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  78
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  79
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  80
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  81
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  82
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  83
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  84
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  85
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  86
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  87
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  88
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  89
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  90
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  91
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  92
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  93
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  94
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  95
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  96
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  97
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  98
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  99
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+Clock cycles done:  100
+Instruction Queue:  []
+
+Register Alias Table (RAT):
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+Register File:
+
+	R0        	R1        	R2        	R3        	R4        	R5        	R6        	R7        	R8        	R9        	
+	10        	10        	10        	20        	30        	50        	80        	130       	10        	10        	
+
+Reservation Stations:
+
+	integer add/sub:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	integer mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float add:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	float mult:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+	logic:
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+		| ░░░  | ░░░░░░░░ | ░░░░░░░░ |     free     |
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
